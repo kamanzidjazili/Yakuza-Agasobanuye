@@ -1,0 +1,344 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2em;
+}
+body{
+    background-image: linear-gradient(rgba(135, 135, 135, 0.6),rgba(135, 135, 135, 0.6)),url(image/karirwi.jpg);
+    color: #fff;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #ffb43a;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+   padding-inline-start: 20px;
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: whitesmoke;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+}
+.logo span{
+    color: mediumseagreen;
+}
+.nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.nav ul li a{
+    color: #fff;
+    transition: 0.4s;
+    padding: 13px;
+    border-radius: 10px;
+    background: grey;
+    font-variant: small-caps;
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav ul li a:hover{
+    color: floralwhite ;
+}
+
+
+    .watch-btn{
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    color: #fff;
+    padding-top: 10px;
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    justify-content: center;
+}
+.watch-btn .fa-solid{
+    font-size: 20px;
+    background-color: #ffb43a;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    animation: go 2s linear infinite;
+}
+
+.watch-btn .fa:hover{
+    background: khaki;
+}
+
+.movie-box{
+    width: 100%;
+    height: 380px;
+    margin: 0 5px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.movie-box .img-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+.movie-box .box-text{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    justify-content: flex-end;
+    background: linear-gradient(8deg,hsl(240 17% 14%/ 74%) 14%,hsl(
+    240 17% 14%/ 14%) 44%);
+}
+.movie-text{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.movie-type{
+    font-size: 0.983rem;
+}
+.play-btn{
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+}
+.movie .head{
+    padding: 10px 14px;
+}
+.movie-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    gap: 1.5rem;
+}
+.movie{
+    padding: 40px;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border: 1px solid hsl(200 100% 99% / 5%);
+    background: #333;
+    margin-bottom: 2rem;
+}
+.heading-tittle{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.next-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.next-btn{
+    background: #ffb43a;
+    color: white;
+    padding: 12px 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    
+}
+@keyframes go{
+    0%{
+        box-shadow: 0 0 0 0 rgb(255, 180, 58, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgb(255, 193, 7, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 0 rgb(255, 193, 58, 0.7);
+    }
+    100%{
+        box-shadow: 0 0 0  rgb(255, 193, 58, 0.7);
+    }
+}
+.next-btn:hover{
+    background: #ffb456;
+    transition: .3s all linear;
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 1170px){
+    .nav{
+        
+        border-top: 1px solid hsl(200 100% 99% / 5%);
+        background: linear-gradient(
+            8deg,
+        hsl(240 17% 14% / 100%) 5%, 
+        hsl(240 17% 14% / 90%) 100%);
+    }
+    .nav .fas{
+        font-size: 1.5rem;
+    }
+    .copyright{
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 1060px){
+    .container{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 991px){
+    .movie-box{
+        height: 340px;
+    }
+    .movie-content{
+        grid-template-columns: repeat(auto-fit, minmax(214px, 1fr));
+    }
+}
+@media (max-width: 888px){
+    .nav{
+        padding: 14px 0;
+    }
+    .home-tittle{
+        font-size: 1.6rem;
+    }
+    .watch-btn span{
+        font-size: 0.9rem;
+    }
+    .movie-text{
+        font-size: 1rem;
+        margin-top: 4rem !important;
+    }
+    .play-movie{
+        bottom: 14rem;
+        right: 4rem;
+    }
+    
+}
+@media (max-width: 768px){
+    .nav{
+        padding: 11px 0;
+    }
+    .nav ul {
+        display: flex;
+    }
+    .logo{
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+    
+    section{
+        padding: 2rem 0;
+    }
+    
+    .movie-type{
+        margin-top: 2px;
+        font-size: 0.875rem;
+    }
+    .tags span{
+        font-size: 0.875rem;
+    }
+    .play-text h2{
+        font-size: 1.3rem;
+    }
+    .play-movie{
+        top: 18rem;
+        right: 2rem;
+    }
+}
+@media (max-width: 514px){
+    @media (max-width: 514px){
+    .play-text{
+        padding: 20px;
+    }
+    .play-movie{
+        top: 26rem;
+    }
+    
+    .video-box{
+        width: 94%;
+    }
+    .search{
+        width: 80%;
+        position: absolute;
+        top: 120px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 408px){
+   *{
+    scroll-padding-top: 5rem;
+   }
+   .nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+   }
+.search{
+        width: 90%;
+        position: absolute;
+        top: 180px;
+        left: 20px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 370px){
+    .home{
+        min-height: 250px;
+    }
+    .movie-box{
+        height: 185px;
+    }
+    .logo{
+        font-size: 0.897rem;
+    }
+    .user-img{
+        width: 10%;
+        height: 10%;
+        margin-left: 17rem;
+        position: relative;
+        top: -27px;
+    }
+    .navbar{
+        padding: 8px 0;
+        justify-content: space-around;
+    }
+    .watch-btn .fas .fa-solid{
+        font-size: 1.3rem;
+    }
+    .download-link{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
